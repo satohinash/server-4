@@ -22,7 +22,7 @@
 
         // GETリクエスト（クエリー）
         async getData() {
-          const res = await fetch('/api');
+          // 自前のAPサーバーからfetchしてみる
           this.data = await res.json();
           console.log(this.data.message);
         }

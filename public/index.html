@@ -23,8 +23,9 @@
         // GETリクエスト（クエリー）
         async getData() {
           // 自前のAPサーバーからfetchしてみる
+          const res = await fetch('/api');
           this.data = await res.json();
-          console.log(this.data.message);
+          console.log(this.data.data.results[0]);
         }
       };
     }
